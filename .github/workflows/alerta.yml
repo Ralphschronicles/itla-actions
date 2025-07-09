@@ -1,0 +1,17 @@
+name: Notificación de cambios en main
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar notificación a ntfy.sh
+        run: |
+          curl -d "Se ha actualizado el repositorio ${{ github.repository }} en la rama main" \
+          -H "Title: Nuevo commit en ${{ github.repository }}" \
+          -H "Priority: default" \
+          -H "Tags: github" \
+          ntfy.sh/devops-itla
