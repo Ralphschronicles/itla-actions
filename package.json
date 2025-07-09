@@ -1,0 +1,11 @@
+{
+  "name": "hola-mundo-actions",
+  "version": "1.0.0",
+  "description": "Programa Hola Mundo con GitHub Actions",
+  "main": "hola.js",
+  "scripts": {
+    "start": "node hola.js"
+  },
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
